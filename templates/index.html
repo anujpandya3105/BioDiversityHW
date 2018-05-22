@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flask Plotlyjs Example</title>
+    <title>Bio Diversity</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
+	<h1> Data Rendered from Flask Web Server and SQLITE ! </h1>
     <div id="bar"></div>
-    <script>
+    <!--<script>
         
         // Plot the default route once the page loads
         var default_url = "/emoji_char";
@@ -35,12 +36,34 @@
                 updatePlotly(data);
             });
         }
-    </script>
+		
+    </script>-->
 
-    <select id="selDataset" onchange="getData(this.value)">
-        <option value="emoji_char">Emoji Char</option>
-        <option value="emoji_id">Emoji ID</option>
-        <option value="emoji_name">Emoji Name</option>
-    </select>
+	
+    <!--<select id="selDataset" method="GET" action="/names">
+        {% for name in selDataset %}
+		{console.log(`${selDataset}`)}
+		<option value= "{{name}}" >{{selDataset}}</option>"
+		{{name}}
+		{% endfor %}
+    </select>-->
+	<!--<div method="GET" action="/names">
+	
+		<select>
+		{% for name in selDataset %}
+			<option value={{name}}>{{name}}</option>
+		{% endfor %}
+		</select>
+	
+    </div>-->
+    
+    <!--<ul id="myNames"></ul>-->
+    <select id="selDataset" onchange="optionChanged(this.value)"></select>
+    <div id="d_sampledata"></div>
+
+	<script type='text/javascript' src="../static/app.js"></script>
+	
+	
+	
 </body>
 </html>
