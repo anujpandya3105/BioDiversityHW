@@ -29,7 +29,7 @@ d. Bubble Char of Sample <br>
 
 ## Each of these charts re draw themselves when a Different sample is selected from the Sample dropdown list.
 
-## How to execute the program <br>
+## Steps to execute the program <br>
 1. cd to the folder where the app.py is stored <br>
 Ensure that the following directory structures are set up a) Datasets for the database b) templates for index.html c) static for the Javascript file (app.js). <br>
 
