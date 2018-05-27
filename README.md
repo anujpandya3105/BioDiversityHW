@@ -27,7 +27,7 @@ b. Name value pair of each sample data <br>
 c. Pie Chart of Sample <br>
 d. Bubble Char of Sample <br>
 
-## Each of these charts re draw themselves when a Different sample is selected from the Sample dropdown list.
+#### Each of these charts re draw themselves when a Different sample is selected from the Sample dropdown list.
 
 ## Steps to execute the program <br>
 1. cd to the folder where the app.py is stored <br>
