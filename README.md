@@ -1,5 +1,5 @@
 # BioDiversityHW
-## Step 1 : <br>
+## Step 1 (Data Extraction) <br>
 For the first step the data needed to be extracted from the sqlite database.<br>
 There are 3 tables in the belly_button_diversity database <br>
 a. otu <br>
@@ -21,3 +21,17 @@ Next step was to take the Jupyter code and place it all in an editor like Pychar
 Save the file with name app.py <br>
 
 ## Step 2(Visualisation of the data)
+Data has been visualized using JavaScript and Plotly. The following data is diplayed:<br>
+a. List of Samples <br>
+b. Name value pair of each sample data <br>
+c. Pie Chart of Sample <br>
+d. Bubble Char of Sample <br>
+
+## Each of these charts re draw themselves when a Different sample is selected from the Sample dropdown list.
+
+## How to execute the program <br>
+1. cd to the folder where the app.py is stored <br>
+Ensure that the following directory structures are set up a) Datasets for the database b) templates for index.html c) static for the Javascript file (app.js). <br>
+
+
+
