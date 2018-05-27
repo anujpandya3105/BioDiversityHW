@@ -18,5 +18,6 @@ f. @app.route('/wfreq/<sample>') : Genarates Wash Frequency <br>
 g. @app.route('/samples/<sample>')  : Generates OTU IDs and Sample Values <br>
 
 Next step was to take the Jupyter code and place it all in an editor like Pycharm(to check for formatting). <br>
-Save the file with name ## app.py <br>
+Save the file with name app.py <br>
 
+## Step 2(Visualisation of the data)
