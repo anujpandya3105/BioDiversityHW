@@ -35,8 +35,8 @@ Ensure that the following directory structures are set up a) Datasets for the da
 2. run command python app.py <br>
 3. Data rendering can be individually verified by going to each route separately e.g. <br>
 #### http://127.0.0.1/5000/samples/BB_940 <br>
-4. To view the plots run URL http://127.0.0.1/5000/. List Drpdowm, pie and bubble charts, key/value pair from the metadata JSON object <br>
-will be displayed for the first sample in the dropdown.
+4. To view the plots run URL http://127.0.0.1/5000/. List Drpdowm, pie and bubble charts, key/value pair from the metadata JSON object  will be displayed for the first sample in the dropdown.<br>
+5. Choose another sample from the dropdown list and the plots will redraw themselves.
 
 
 
