@@ -36,15 +36,16 @@ session = Session(engine)
 
 @app.route("/")
 def home():
-    #return render_template("index.html")
-    return(
-    f"Available Routes:<br/>"
-    f"/names<br/>"
-    f"/otu<br/>"
-    f"/metadata/<sample></br>"
-    f"/wfreq/<sample></br>"
-    f"/samples/<sample>"
-    )
+    return render_template("index.html")
+    #return(
+    #f"Available Routes:<br/>"
+    #f"/names<br/>"
+    #f"/otu<br/>"
+    #f"/metadata/<sample></br>"
+    #f"/wfreq/<sample></br>"
+    #f"/samples/<sample>"
+    #)
+	#return render_template("index.html")
 
 
 @app.route("/names")
@@ -53,7 +54,7 @@ def names():
     sample_names_ls = [name.key for name in sample_names]
     sample_names_ls.remove("otu_id")
     return jsonify(sample_names_ls)
-
+    #return render_template("index.html", selDataset=sample_names_ls)
 
 @app.route("/otu")
 def otu():
@@ -62,13 +63,13 @@ def otu():
     return jsonify(otu_descriptions_list)
 
 
-# @app.route("/otu_descriptions")
-# def otu_disc():
-#    otu_descriptions = session.query(Otu.otu_id, Otu.lowest_taxonomic_unit_found).all()
-#    otu_dict = {}
-#    for row in otu_descriptions:
-#        otu_dict[row[0]] = row[1]
-#    return jsonify(otu_dict)
+@app.route("/otu_descriptions")
+def otu_disc():
+    otu_descriptions = session.query(Otu.otu_id, Otu.lowest_taxonomic_unit_found).all()
+    otu_dict = {}
+    for row in otu_descriptions:
+        otu_dict[row[0]] = row[1]
+    return jsonify(otu_dict)
 
 @app.route("/metadata/<sample>")
 def sample_query(sample):
@@ -106,7 +107,7 @@ def get_sample_value(sample):
 
     my_query = "Samples." + sample  # eg. 'Samples.BB_940'
     print(my_query)
-    query_result = session.query(Samples.otu_id, my_query).order_by(desc(my_query))
+    query_result = session.query(Samples.otu_id, my_query).order_by(desc(my_query)).limit(10)
 
     for result in query_result:
         otu_ids.append(result[0])
